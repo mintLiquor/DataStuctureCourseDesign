@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Integrated Application</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <script defer src="lib/font.js"></script>
+    <script src="lib/d3.v5.min.js"></script>
+</head>
+
+<body>
+
+<!--
+<section class="hero is-link">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title ">社会关系网</h1>
+            <h2 class="subtitle">张天然 1751237</h2>
+        </div>
+    </div>
+</section>
+-->
+
+<div class="tile is-ancestor" style="margin: 10px 5px 10px 5px;">
+
+
+    <div class="tile is-3 is-vertical is-parent">
+
+
+        <div class="tile is-child box">
+            <div class="content">
+                <h2>功能描述：</h2>
+                <p>在社会关系网中，一个人的属性包括地区、就读的各级学校、工作单位等，每人有众多好友。
+                    现从该社会关系网络中某一人出发，寻找其可能认识的人。</p>
+                <ul>
+                    <li>通过图形化界面，显示某人的社会关系网络。</li>
+                    <li>寻找某人可能认识的人（不是其好友），并查看这些人与其关联度（共同好友数）。</li>
+                    <li>根据可能认识的关联度对这些人进行排序</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="columns" style="margin: 10px 5px 10px 5px;">
+            <div class="column">
+                <div class="box">
+                    <div class="content">
+                        <h2>寻找可能认识的人</h2>
+                    </div>
+                    <div class="field has-addons">
+                        <div class="control">
+                            <input class="input" type="text" name="name" id="input7"
+                                   placeholder="please input the name">
+                        </div>
+                        <div class="control">
+                            <input class="button is-link" type="button" name="click2" value="find" id="button2">
+                        </div>
+                    </div>
+                    <div class="content" id="output"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="tile is-parent">
+        <div class="tile is-child box">
+            <div class="content">
+                <h2>社会关系网络</h2>
+            </div>
+            <svg width="1000" height="800"></svg>
+        </div>
+    </div>
+
+
+    <div class="tile is-child is-2 box">
+        <div class="content">
+            <h2>添加一个人的信息</h2>
+        </div>
+        <div class="field">
+            <div class="field">
+                <div class="control">
+                    Name：<input class="input is-dark" type="text" placeholder="Name" name="name" id="input1">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    District：<input class="input is-dark" type="text" placeholder="Restrict" name="location"
+                                    id="input2">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Primary school：<input class="input is-dark" type="text" placeholder="Primary school" name="school1"
+                                          id="input3">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Middle school：<input class="input is-dark" type="text" placeholder="Middle school" name="school2"
+                                         id="input4">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    University：<input class="input is-dark" type="text" placeholder="University" name="school3"
+                                      id="input5">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    Company：<input class="input is-dark" type="text" placeholder="company" name="workplace" id="input6">
+                </div>
+            </div>
+
+            <div class="control">
+                <input class="button is-link" type="button" name="click1" value="添加" id="button1">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="lib/jQuery.js"></script>
+<script src="js/AddEdge.js"></script>
+<script src="js/AddNode.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
